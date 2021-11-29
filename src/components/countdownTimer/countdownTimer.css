@@ -1,0 +1,35 @@
+* {
+  background-color: #de3e3c;
+}
+
+.title {
+  color: whitesmoke;
+  font-family: "Oswald";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cdTimer {
+  width: 600px;
+  height: 100px;
+  border-radius: 6px;
+  background-color: whitesmoke;
+
+  font-family: "Oswald";
+  font-size: 40px;
+  color: #fa543c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cdTimer span {
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: whitesmoke;
+}
+
+.time {
+  font-style: italic;
+}
