@@ -1,5 +1,17 @@
 * {
-  background-color: #de3e3c;
+  background-color: #d23333;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -31,5 +43,11 @@
 }
 
 .time {
+  font-style: italic;
+}
+
+.footer {
+  color: whitesmoke;
+  font-size: 10px;
   font-style: italic;
 }
