@@ -13,3 +13,4 @@ function App() {
 
 export default App;
 
+// Write a REACT COMPONENT for the Timestamp
