@@ -1,7 +1,7 @@
 import './countdownTimer.css';
 import logo from '../img/lewagon.png';
 import { useState, useEffect } from 'react';
-import { getTimeLeftUntilTimestamp } from './countdownLogic';
+import { getRemainingTimeUntilMsTimestamp } from './countdownLogic';
 
 const defaultTimeLeft = {
     seconds: '00',
@@ -10,20 +10,20 @@ const defaultTimeLeft = {
     days: '00'
 }
 
-const CountdownTimer = ({ countdownTimestamp }) => {
+const CountdownTimer = ({ countdownTimestampMs }) => {
 
     const [timeLeft, setTimeLeft] = useState(defaultTimeLeft);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            updateTimeLeft(countdownTimestamp);
+            updateTimeLeft(countdownTimestampMs);
         }, 1000);
         return () => clearInterval(intervalId);
 
-    }, [countdownTimestamp])
+    }, [countdownTimestampMs]);
 
     function updateTimeLeft(countdown) {
-        setTimeLeft(getTimeLeftUntilTimestamp(countdown));
+        setTimeLeft(getRemainingTimeUntilMsTimestamp(countdown));
     }
 
     return (

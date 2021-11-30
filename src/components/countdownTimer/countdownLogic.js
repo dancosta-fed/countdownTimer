@@ -1,8 +1,13 @@
-import DayJS from 'dayjs';
+import dayjs from 'dayjs';
 
-export function getTimeLeftUntilTimestamp(timestampms) {
-    const timestampDayJs = DayJS(timestampms);
-    const nowDayJs = DayJS();
+export function getRemainingTimeUntilMsTimestamp(timestampMs) {
+
+
+
+    const timestampDayJs = dayjs(timestampMs);
+    const nowDayJs = dayjs();
+
+
     return {
         seconds: getSecondsLeft(nowDayJs, timestampDayJs),
         minutes: getMinutesLeft(nowDayJs, timestampDayJs),
@@ -14,6 +19,8 @@ export function getTimeLeftUntilTimestamp(timestampms) {
         const seconds = timestampDayJs.diff(nowDayJs, 'seconds') % 60;
         return seconds;
     }
+
+
 
     function getMinutesLeft(nowDayJs, timestampDayJs) {
         const minutes = timestampDayJs.diff(nowDayJs, 'minutes') % 60;
